@@ -26,3 +26,8 @@ const usaPercentage2 = percentageOfWorld2(331.9);
 const mexicoPercentage2 = percentageOfWorld2(130);
 const canadaPercentage2 = percentageOfWorld2(38.25);
 // console.log(usaPercentage2, mexicoPercentage2, canadaPercentage2);
+
+// ==> ARROW FUNCTIONS
+const percentageOfWorld3 = (population) => (population / worldPop) * 100;
+
+// console.log(percentageOfWorld3(44));

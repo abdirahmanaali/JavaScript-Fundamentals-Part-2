@@ -31,3 +31,14 @@ const canadaPercentage2 = percentageOfWorld2(38.25);
 const percentageOfWorld3 = (population) => (population / worldPop) * 100;
 
 // console.log(percentageOfWorld3(44));
+
+// ==> FUNCTIONS CALLING OTHER FUNCTIONS
+function describePopulation(country, population) {
+  const percentage = percentageOfWorld1(population);
+  return `${country} has ${population} million people which is about ${percentage}% of the world.`;
+}
+// console.log(
+//   describePopulation("Usa", 331.9),
+//   describePopulation("Mexico", 130),
+//   describePopulation("Canada", 38.25)
+// );

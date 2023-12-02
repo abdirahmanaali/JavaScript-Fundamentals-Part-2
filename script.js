@@ -47,7 +47,7 @@ const yearsUntilRetirement = (birthYear, firstName) => {
   // return retirement;
   return `${firstName} retires in ${retirement}`;
 }; // Example with more line of code. We can only leave out RETURN when we have one liner function
-console.log(yearsUntilRetirement(1991, "Ali"));
+// console.log(yearsUntilRetirement(1991, "Ali"));
 
 // ==> FUNCTIONS CALLING OTHER FUNCTIONS
 function cutFruitProcessor(fruit) {
@@ -60,4 +60,57 @@ function fruitProcessor(apples, oranges) {
   const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of oranges`;
   return juice;
 }
-console.log(fruitProcessor(2, 3));
+// console.log(fruitProcessor(2, 3));
+
+// ==> INTODUCTION TO ARRAYS
+// Arrays are like big containers into which wwe can throw variable and reference them later.
+// NB/ the two most important data structures in Javascript are arrays and objects
+const friends = ["Michael", "Steven", "Peter"];
+// Creating an arrays we first store it in a variable and then use BRACKETS [] then we put different values separated by commas.
+// NB/ Arrays can hold as many values as we want and also any values of any type that we'd like strings, numbers, etc
+// console.log(friends);
+
+// They way to get acces to the array is to use the square bracket synatx
+// if we want to log the first element of friend's array
+
+// console.log(friends[0]);
+// console.log(friends[2]);
+
+// Arrays are Zero-based, which means that Michael is the first element.
+// We can also get the actual number of elements in an array.
+
+// console.log(friends.length);
+
+// It is not zero-based instated it gives us number of elements in the Array
+
+// We can use .lenght to get the last element of any array for ex
+
+// console.log(friends[friends.length - 1]);
+
+// Bracket can be used to add elements to the array for ex.
+friends[2] = "Ali";
+friends[3] = "Farah";
+
+// console.log(friends);
+
+// In the two examples i managed to change index two to Ali and added a new index with Farah
+
+// Another way to create ARRAY is
+const years = new Array(1991, 2011, 2014, 2020, 2023);
+// The brackets is the most common way to write arrays as they are called LITERAL SYNTAX
+
+// ==> BASIC ARRAY OPERATIONS (METHODS)
+// Add element
+// Push Method adds elements to the end of an array
+friends.push("Maryan");
+// unshift methods adds elements to the beginning of an array
+friends.unshift("Abdullahi");
+console.log(friends);
+
+// Remove elements
+// Pop will remove the last element
+friends.pop();
+// shift will remove the first element
+friends.shift();
+console.log(friends);
+// This time we don't need to pass any argument to remove

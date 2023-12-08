@@ -63,6 +63,7 @@ function fruitProcessor(apples, oranges) {
 // console.log(fruitProcessor(2, 3));
 
 // ==> INTODUCTION TO ARRAYS
+
 // Arrays are like big containers into which wwe can throw variable and reference them later.
 // NB/ the two most important data structures in Javascript are arrays and objects
 const friends = ["Michael", "Steven", "Peter"];
@@ -105,12 +106,98 @@ const years = new Array(1991, 2011, 2014, 2020, 2023);
 friends.push("Maryan");
 // unshift methods adds elements to the beginning of an array
 friends.unshift("Abdullahi");
-console.log(friends);
+
+// console.log(friends);
 
 // Remove elements
 // Pop will remove the last element
 friends.pop();
 // shift will remove the first element
 friends.shift();
-console.log(friends);
+
+// console.log(friends);
+
 // This time we don't need to pass any argument to remove
+
+// A very useful method that tells us in which position a certain element is in the array.
+
+// console.log(friends.indexOf("Ali"));
+
+// another useful is Includes and instead of returning the index of, will simply return true if the element is in the array and false if it's not
+// it alo uses strict equallity
+
+// console.log(friends.includes("Ali"));
+
+// ==> INTRODUCTION TO OBJECTS
+
+// The simplest way to write an Object is with Curly Brace and this format is called Object Literal Syntax. Here is an example
+const ali = {
+  firstName: "Ali",
+  lastName: "Jay",
+  job: "teacher",
+  birthYear: 1991,
+  friends: ["Michael", "Peter", "Steven"],
+  hasDriverLicense: true,
+  calcAge1: function () {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+    console.log(this.age);
+  },
+  // Video Challenge
+  // ali is a ---years old teacher, and he has a driver's license
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge1()}-old ${
+      this.job
+    }, and has ${this.hasDriverLicense ? "a" : "no"} driver's license`;
+  },
+};
+
+// console.log(ali.getSummary());
+
+// we use objects to essentially group together different variables that really belong together.
+// The defference between objects and arrays in objects the order of these values does not matter at all when we want to retrieve them.
+// We use Objects for more unstructured data
+// Arrays other hand the order in which we specify the elements matter a lot becuase that;s how we access the elements.
+// We use arrays for more order data
+
+// ==> DOT Vs BRACET NOTATION
+// First way of getting a property from an object is via DOT NOTATION. Here is an example
+
+// console.log(ali.lastName);
+
+// We can do the samething using the Bracket Notaton. We also might need to specify a sting with it's property name. For example
+
+// console.log(ali["lastName"]);
+
+// In the braket notation we can put any expression that we'd like. It's also common to use it for expression.
+// When we need to compute the property name is when we use Bracket Notation.
+// In any other case use the DOT NOTATION. for example
+const keyName = "Name";
+
+// console.log(ali[`first${keyName}`]); // This is a template literals
+// console.log(ali["last" + keyName]);
+
+// Adding new properties into objects
+ali.location = "Mexico"; // Dot Notation
+ali["hobbies"] = "Playing football"; // Bracket Notation
+
+// another example
+
+// const interestedIn = prompt(
+//   "What do you need to know about Ali? Choose between firstName, lastName, age, job, location, hobbies and friends"
+// );
+
+// if (ali[interestedIn]) {
+//   console.log(ali[interestedIn]);
+// } else {
+//   console.log(
+//     "Wrong requested! please Choose between firstName, lastName, age, job, location, hobbies and friends"
+//   );
+// }
+
+// video challenge
+// console.log(
+//   `${ali[`firstName`]} has ${
+//     ali.friends.length
+//   } friends, and his best friends is called ${ali.friends[0]}`
+// );

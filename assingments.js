@@ -42,3 +42,51 @@ function describePopulation(country, population) {
 //   describePopulation("Mexico", 130),
 //   describePopulation("Canada", 38.25)
 // );
+
+// ==> INTODUCTION TO ARRAYS
+const countriesPop = [277.5, 240.4, 223.8, 216.4];
+// console.log(countriesPop.lenght === 4);
+
+const percentage = [
+  percentageOfWorld1(countriesPop[0]),
+  percentageOfWorld1(countriesPop[1]),
+  percentageOfWorld1(countriesPop[2]),
+  percentageOfWorld1(countriesPop[3]),
+];
+// console.log(percentage);
+
+// ==> BASIC ARRAY OPERATIONS (METHODS)
+const neighbours = ["Canada", "Mexico", "Cuba"];
+neighbours.push("Utopia");
+// console.log(neighbours);
+neighbours.pop();
+// console.log(neighbours);
+if (!neighbours.includes("Germany")) {
+  // console.log("Probably not a central European country");
+}
+// console.log(neighbours.indexOf("Cuba"));
+neighbours[2] = "Republic of Cuba";
+// console.log(neighbours);
+
+// ==> INTODUCTION TO OBJECTS
+const myCountry = {
+  country: "Kenya",
+  capital: "Nairobi",
+  language: "Swahili",
+  population: 53.1,
+  neighbours: ["Uganda", "South Sudan", "Ethiopia", "Somalia", "Tanzania"],
+};
+
+// DOT VS BRACKET NOTATION
+
+// console.log(
+//   `${myCountry.country} has ${myCountry.population} million ${myCountry["language"]}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry["capital"]}.`
+// );
+
+myCountry.population = 53.1 + 2; // DOT
+
+// console.log(myCountry);
+
+myCountry["population"] = 53.1 - 2; // BRACKET
+
+// console.log(myCountry);

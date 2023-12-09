@@ -79,9 +79,9 @@ const myCountry = {
 
 // DOT VS BRACKET NOTATION
 
-// console.log(
-//   `${myCountry.country} has ${myCountry.population} million ${myCountry["language"]}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry["capital"]}.`
-// );
+console.log(
+  `${myCountry.country} has ${myCountry.population} million ${myCountry["language"]}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry["capital"]}.`
+);
 
 myCountry.population = 53.1 + 2; // DOT
 

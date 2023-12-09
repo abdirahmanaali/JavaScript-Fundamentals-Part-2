@@ -201,3 +201,15 @@ ali["hobbies"] = "Playing football"; // Bracket Notation
 //     ali.friends.length
 //   } friends, and his best friends is called ${ali.friends[0]}`
 // );
+
+// ==> ITERATIONS: THE FOR LOOP
+// Loops allow us to automate repetitive tasks.
+// A for loop is a loop that has a counter. It has three parts.
+// First one is the initial value of a counter doing it by creating a new variable that's a let. it has to be a let so the loop can leter change it.
+// We use a semicolon and move to the second part. This part is a logical condition that is evaluated before each iteration of the loop. if the condition is true the next loop iteration will run. But as soon as this condtion is false, then the loop stops.
+// After a semicolon the third part is increasing or decreasing a counter
+// lastly we write the code that needs to be repeated
+
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`lifting weights repetition ${rep}`);
+}
